@@ -5,6 +5,12 @@
 * `j`, `k` - Move the cursor down / up
 * `h`, `l` - Move the cursor left / right
 
+### General
+
+* `u` - Undo the last command
+* `U` - Undo all the changes on a line
+* `CTRl + R - Redo the commands (undo the undo's)
+
 ### Delete
 
 * `dw` - Delete until the start of the next word
@@ -20,3 +26,6 @@
 * `3e` - To move the cursor to the end of the third word forward
 * `0` - To move to the start of the line
 
+### Handy
+
+* `p` - Put previously deleted text after the cursor
