@@ -9,7 +9,13 @@
 
 * `u` - Undo the last command
 * `U` - Undo all the changes on a line
-* `CTRl + R - Redo the commands (undo the undo's)
+* `CTRl + R` - Redo the commands (undo the undo's)
+* `p` - Put previously deleted text after the cursor
+* `rx`- Use it to replace the character at the cursor with `x`
+* `ce` - To change until the end of a word (it'll delete the word and change to Insert mode)
+* `c$`- Almost the same as the previous one, but this will delete until the end of the line and then change to Insert mode
+* `G` - To move to the bottom of the file
+* `gg`- To move to the start of the file
 
 ### Delete
 
@@ -26,6 +32,5 @@
 * `3e` - To move the cursor to the end of the third word forward
 * `0` - To move to the start of the line
 
-### Handy
 
-* `p` - Put previously deleted text after the cursor
+
