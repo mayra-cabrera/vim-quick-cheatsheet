@@ -16,6 +16,8 @@
 * `c$`- Almost the same as the previous one, but this will delete until the end of the line and then change to Insert mode
 * `G` - To move to the bottom of the file
 * `gg`- To move to the start of the file
+* `o` - To insert a line below the cursor
+* `O` - To insert a line above the cursor
 
 ### Delete
 
@@ -32,5 +34,27 @@
 * `3e` - To move the cursor to the end of the third word forward
 * `0` - To move to the start of the line
 
+### Search
+
+* `/` Searches forward for a phrase
+* `?` - Searches backward for a phrase
+* `n` - to search for the same word
+* `N` - to search for the same word in the opposite direction
+* `?` - to search for a phrase in the backward direction
+* `%`- For matching parentheses search
+
+### Substituting
+
+* `:s/old/new` - Changes the first ocurrence of "old" for "new"
+* `:s/old/new/g`- Changes all the ocurrences of "old" for "new" in a line 
+* `:%s/old/new/g` - Changes all the ocurrences of "old" for "new" in a file
+* `:%s/old/new/gc` - Changes all the ocurrences of "old" for "new" in a file with a prompt whether to substitute or not
+* `:#,#s/old/new/g` - Changes all the ocurrences of "old" for "new" between two lines indicated by `#`
+
+### External Commands
+
+* `:r <file_name>` - Retrives the file name and puts it below the cursor position
+* `:r !dir` - Reads the output of the dir command and puts it below the cursor position
+* `:! <command>`- Execute an external command, to finish it just press <enter>
 
 
