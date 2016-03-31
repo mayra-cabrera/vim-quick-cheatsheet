@@ -6,6 +6,7 @@
 * `U` - Undo all the changes on a line
 * `CTRl + R` - Redo the commands (undo the undo's)
 * `p` - Put previously deleted text after the cursor
+* `v` - To select text, after pressing `v` move the cursor around and then press `:`. You can do whatever you want with the selected course (write `w test` to save it to another file called test or `d` to delete it)
 
 ### Moving between lines
 
@@ -40,6 +41,8 @@ You can use this motions with numbers:
 
 * `O` - To insert a line above the cursor
 * `o` - To insert a line below the cursor
+* `a` - To insert text after the cursor
+* `A` - To insert after the end of the line
 
 ### Delete
 
@@ -53,6 +56,7 @@ You can use this motions with numbers:
 ### Changing existing lines
 
 * `rx`- Use it to replace the character at the cursor with `x`
+* `Rx` - Same as before, but this replace more than one character (every typed character deletes an existing one)
 * `ce` - To change until the end of a word (it'll delete the word and change to Insert mode)
 * `c$`- Almost the same as the previous one, but this will delete until the end of the line and then change to Insert mode
 
@@ -64,6 +68,13 @@ You can use this motions with numbers:
 * `N` - to search for the same word in the opposite direction
 * `?` - to search for a phrase in the backward direction
 * `%`- For matching parentheses search
+
+Using `:set xxx`
+* `ic` - Ignores upper/loewr case
+* `is` - Show partial matchers
+* `hls` - Highlight all matching phrases
+
+Prepend "no" to switch an option off (`:set noic`)
 
 ### Substituting
 
@@ -78,5 +89,9 @@ You can use this motions with numbers:
 * `:r <file_name>` - Retrives the file name and puts it below the cursor position
 * `:r !dir` - Reads the output of the dir command and puts it below the cursor position
 * `:! <command>`- Execute an external command, to finish it just press <enter>
+
+### Copying
+
+* `y` - To copy text, this could be used with hightlighted text after selecting it with visual mode or with another operator `yw`)
 
 
