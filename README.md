@@ -34,8 +34,8 @@
 * `,` - Repeat last `f`, `t`, `F` or `T` command but in opposite direction
 
 You can use this motions with numbers:
-* `2w` - To move the cursor two words forward (*you could use a different number*)
-* `3e` - To move the cursor to the end of the third word forward
+* `2w` - To move forward the cursor two words (*you could use a different number*)
+* `3e` - To move forward the cursor to the end of the third word 
 
 ### Insertions
 
