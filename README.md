@@ -49,16 +49,27 @@ You can use this motions with numbers:
 * `dw` - Delete until the start of the next word
 * `de` - Delete to the end of the current word
 * `d$` - Delete to the end of the line
+* `dj` - Delete down a line
 * `d2w` - Delete two consecutive words (*you could use a different number*)
+* `d2e` - Delete to the end of the second word 
 * `dd` - Delete the complete line
 * `2dd` - Delete two lines (*you could use a different number*)
+* `dt,` - Delete until `,`, you can use it with another character
+* `df,` - Delete before the `,` you can use it with another character
+* `daw` - Delete the complete word. It doesn't matter where the cursor is
+* `dip` - Deletes the inner paragraph
+* `dap` - Deletes a paragraph
 
 ### Changing existing lines
 
 * `rx`- Use it to replace the character at the cursor with `x`
 * `Rx` - Same as before, but this replace more than one character (every typed character deletes an existing one)
+* `cw` - Delete until the start of the next word and change you to insert mode
 * `ce` - To change until the end of a word (it'll delete the word and change to Insert mode)
 * `c$`- Almost the same as the previous one, but this will delete until the end of the line and then change to Insert mode
+* `cj` - Deletes down a line and change you to insert mode
+* `cc` - Deletes a line and change you into insert mode
+* `caw`- Deletes a complete word and change you into insert mode
 
 ### Search
 
@@ -93,5 +104,13 @@ Prepend "no" to switch an option off (`:set noic`)
 ### Copying
 
 * `y` - To copy text, this could be used with hightlighted text after selecting it with visual mode or with another operator `yw`)
+
+### Identation
+
+* `>` - To indent a line
+* `<` - To dedent a line
+* `=` - To reformat a line (based on the file identation)
+* `>ap` - To ident a inner block
+* `=ap` - To reformat a inner block
 
 
