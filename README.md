@@ -113,4 +113,30 @@ Prepend "no" to switch an option off (`:set noic`)
 * `>ap` - To ident a inner block
 * `=ap` - To reformat a inner block
 
+### Windows & Tabs
 
+* `:new` - Open a new window above the current window
+* `:vnew` - Open a new window on the side of the current window
+* `:split` - Edit a specified file in new window above the current window
+* `:vsplit` - Edit a specified file in new window beside the current window
+* `Ctrl + w + (h,j,k,l)` - Navigate to the window in the given direction (h, j, k, l)
+* `Ctrl + w + (H, J, K, L)` - Move the current window in the given direction
+* `[count] Ctrl + w -` - Decrease the height of the current window
+* `[count] Ctrl + w +` - Increase the height of the current window
+* `[count] Ctrl + w <` - Decrease the width of the current window
+* `[count] Ctrl + w >` - Increase the width of the current window
+* `Ctrl + w =` - Equalize the width and height of all windows
+
+### Position the bugger
+
+* `zz` - Center the current line within the window
+* `zt` - Bring the current line to the top of the window
+* `zb` - Bring the current line to the bottom of the window
+
+### Tabes
+
+* `:tabnew` - Opens a new tab
+* `:tabedit` - Edit the specific file in a new tab
+* `:gt` - Go to the next tab
+* `:GT` - Go to the previous tab
+* `Ctrl + w + T` - Break the current window out to a new tab
