@@ -140,3 +140,8 @@ Prepend "no" to switch an option off (`:set noic`)
 * `:gt` - Go to the next tab
 * `:GT` - Go to the previous tab
 * `Ctrl + w + T` - Break the current window out to a new tab
+
+### Visual Modes
+
+* `V` - Changes to visual line mode which operates on entire lines at a time.
+* `Ctrl + v`- Changes to visual block mode which allows you for selecting a column or a text. You can use `I` or `A` to insert text before or after, Vim will only show the change for the first line of the block, but will then replicate to all lines after you complete the change and hit `esc`
