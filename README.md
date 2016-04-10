@@ -144,4 +144,4 @@ Prepend "no" to switch an option off (`:set noic`)
 ### Visual Modes
 
 * `V` - Changes to visual line mode which operates on entire lines at a time.
-* `Ctrl + v`- Changes to visual block mode which allows you for selecting a column or a text. You can use `I` or `A` to insert text before or after, Vim will only show the change for the first line of the block, but will then replicate to all lines after you complete the change and hit `esc`
+* `Ctrl + v`- Changes to visual block mode which allows you for selecting a column or a text. You can use `I` or `A` to insert text before or after, Vim will only show the change for the first line of the block, but will then replicate to all lines after you complete the change and hit `esc`. Really helpful for `git rebase`operations
