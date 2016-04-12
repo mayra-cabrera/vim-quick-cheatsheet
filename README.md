@@ -110,7 +110,7 @@ Prepend "no" to switch an option off (`:set noic`)
 * `>` - To indent a line
 * `<` - To dedent a line
 * `=` - To reformat a line (based on the file identation)
-* `>ap` - To ident a inner block
+* `>ap` - To indent a inner block
 * `=ap` - To reformat a inner block
 
 ### Windows & Tabs
@@ -145,3 +145,7 @@ Prepend "no" to switch an option off (`:set noic`)
 
 * `V` - Changes to visual line mode which operates on entire lines at a time.
 * `Ctrl + v`- Changes to visual block mode which allows you for selecting a column or a text. You can use `I` or `A` to insert text before or after, Vim will only show the change for the first line of the block, but will then replicate to all lines after you complete the change and hit `esc`. Really helpful for `git rebase`operations
+
+### Configuration
+
+* `:e $MYVIMRC` - Open your vimrc fileand allows for quick editing
