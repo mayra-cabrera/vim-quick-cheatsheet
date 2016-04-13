@@ -149,3 +149,14 @@ Prepend "no" to switch an option off (`:set noic`)
 ### Configuration
 
 * `:e $MYVIMRC` - Open your vimrc fileand allows for quick editing
+
+### Plugins
+
+#### CtrlP
+
+* `Ctrl + k` - Move up in the results lists
+* `Ctrl + j`- Move down in the results list
+* `Ctrl + p` - Cyclce through previous searches
+* `Ctrl + n` - Cycle through foward serches
+* `Ctrl + t` - Open the highlighted file in a new tab
+* `Ctrl + s` - Open the hightighted file in a new split 
