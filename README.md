@@ -75,9 +75,9 @@ You can use this motions with numbers:
 
 * `/` Searches forward for a phrase
 * `?` - Searches backward for a phrase
-* `n` - to search for the same word
-* `N` - to search for the same word in the opposite direction
-* `?` - to search for a phrase in the backward direction
+* `n` - To search for the same word
+* `N` - To search for the same word in the opposite direction
+* `?` - To search for a phrase in the backward direction
 * `%`- For matching parentheses search
 
 Using `:set xxx`
@@ -97,7 +97,7 @@ Prepend "no" to switch an option off (`:set noic`)
 
 ## External Commands
 
-* `:r <file_name>` - Retrives the file name and puts it below the cursor position
+* `:r <file_name>` - Retrieves the file name and puts it below the cursor position
 * `:r !dir` - Reads the output of the dir command and puts it below the cursor position
 * `:! <command>`- Execute an external command, to finish it just press <enter>
 
