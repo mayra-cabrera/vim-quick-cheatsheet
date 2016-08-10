@@ -59,6 +59,7 @@ You can use this motions with numbers:
 * `daw` - Delete the complete word. It doesn't matter where the cursor is
 * `dip` - Deletes the inner paragraph
 * `dap` - Deletes a paragraph
+* `:1,$d` - Deletes all lines in a file
 
 ## Changing existing lines
 
