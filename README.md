@@ -170,3 +170,5 @@ Prepend "no" to switch an option off (`:set noic`)
 - `vim` - Select inside current ruby method
 - `vaM` - Select around whole class
 - `viM` - Select inside current class
+
+This plugin can also be used with delete, change and yank (`dar` - Todo delete arround current ruby block, `cim` - To change inside current ruby method, etc. How awesome is that?)
