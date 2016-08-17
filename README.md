@@ -161,3 +161,12 @@ Prepend "no" to switch an option off (`:set noic`)
 * `Ctrl + n` - Cycle through foward serches
 * `Ctrl + t` - Open the highlighted file in a new tab
 * `Ctrl + s` - Open the hightighted file in a new split 
+
+### vim-textobj-rubyblock
+
+* `var` - Select around the current ruby block
+* `vir` - Select inside the current ruby block 
+* `vam` - Select around current ruby method
+- `vim` - Select inside current ruby method
+- `vaM` - Select around whole class
+- `viM` - Select inside current class
