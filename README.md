@@ -174,8 +174,8 @@ Prepend "no" to switch an option off (`:set noic`)
 This plugin can also be used with delete, change and yank (`dar` - Todo delete arround current ruby block, `cim` - To change inside current ruby method, etc. How awesome is that?)
 
 
-### Navigating between ruby file
+### Navigating between ruby files
 
 - `gf` - Jumps to highlighted file
 - `ctrl + o` - Returns to original file (after `gf`)
-- `find` - Make fuzzy search with an argument, under the hood uses `ctrl+d` to autocomplete the search. *This is what `Econtroller`, `Emodel` & `Eview`` commands use* 
+- `find` - Make fuzzy search with an argument, under the hood uses `ctrl+d` to autocomplete the search. *This is what `Econtroller`, `Emodel` & `Eview` commands use* 
