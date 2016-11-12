@@ -4,7 +4,7 @@
 
 * `u` - Undo the last command
 * `U` - Undo all the changes on a line
-* `CTRl + R` - Redo the commands (undo the undo's)
+* `Ctrl + R` - Redo the commands (undo the undo's)
 * `p` - Put previously deleted text after the cursor
 * `v` - To select text, after pressing `v` move the cursor around and then press `:`. You can do whatever you want with the selected course (write `w test` to save it to another file called test or `d` to delete it)
 
