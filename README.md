@@ -184,4 +184,4 @@ This plugin can also be used with delete, change and yank (`dar` - Todo delete a
 ### Slackcat
 
 - `:%! slackcat -c test -m image.png` - Sends a image.png to `test`channel in slack
-- `:%! slackcat -u mayra -m image.png` - Sends image.png to specific user in slack 
+- `:%! slackcat -u mayra -m image.png` - Sends image.png to specific user in slack (in this case to `mayra`) 
