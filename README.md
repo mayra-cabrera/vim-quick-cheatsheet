@@ -1,6 +1,6 @@
 # Vim quick cheatsheet
 
-## General
+## General
 
 * `u` - Undo the last command
 * `U` - Undo all the changes on a line
@@ -32,6 +32,8 @@
 * `T` - To move until a character backwards
 * `;` - Repeat last `f`, `t`, `F` or `T` command
 * `,` - Repeat last `f`, `t`, `F` or `T` command but in opposite direction
+* `+` - To the first character of the next line
+* `-` - To the first character of the previous line
 
 You can use this motions with numbers:
 * `2w` - To move forward the cursor two words (*you could use a different number*)
@@ -39,31 +41,43 @@ You can use this motions with numbers:
 
 ## Insertions
 
+* `I` - Insert text at the beginning of the line.
 * `O` - To insert a line above the cursor
 * `o` - To insert a line below the cursor
 * `a` - To insert text after the cursor
 * `A` - To insert after the end of the line
 
+You can use this motions with numbers:
+
+* `50i*ESC` - Inserts 50 asterisks
+* `25a*-` - Appends 50 characters (25 pairs of asterik and hyphen)
+
 ### Delete
 
 * `dw` - Delete until the start of the next word
-* `de` - Delete to the end of the current word
-* `d$` - Delete to the end of the line
+* `de` - Delete to the end of the current word.
+* `dE` - Delete until the end of the word, including punctuation
+* `d$` - Delete to the end of the line. `D` will also do the trick.
 * `dj` - Delete down a line
-* `d2w` - Delete two consecutive words (*you could use a different number*)
-* `d2e` - Delete to the end of the second word 
 * `dd` - Delete the complete line
-* `2dd` - Delete two lines (*you could use a different number*)
 * `dt,` - Delete until `,`, you can use it with another character
 * `df,` - Delete before the `,` you can use it with another character
 * `daw` - Delete the complete word. It doesn't matter where the cursor is
 * `dip` - Deletes the inner paragraph
 * `dap` - Deletes a paragraph
+* `s` - Delete character at cursor and substitute text
+* `S` - Delete line and substitute text
+
+You can user this motions with numbers:
+
+* `d2w` - Delete two consecutive words (*you could use a different number*)
+* `d2e` - Delete to the end of the second word 
+* `2dd` - Delete two lines (*you could use a different number*)
 * `:1,$d` - Deletes all lines in a file
 
 ## Changing existing lines
 
-* `rx`- Use it to replace the character at the cursor with `x`
+* `rx`- Use it to replace the character at the cursor with `x` (*you could use a different number*)
 * `Rx` - Same as before, but this replace more than one character (every typed character deletes an existing one)
 * `cw` - Delete until the start of the next word and change you to insert mode
 * `ce` - To change until the end of a word (it'll delete the word and change to Insert mode)
@@ -71,6 +85,15 @@ You can use this motions with numbers:
 * `cj` - Deletes down a line and change you to insert mode
 * `cc` - Deletes a line and change you into insert mode
 * `caw`- Deletes a complete word and change you into insert mode
+* `~` - Will change a lowercase letter to uppecase or an uppercase letter to lowercase.
+
+## Joining lines together
+
+* `J` - Merges two lines into one, position the cursor anywhere on the first line.
+
+You can use this motions with numbers:
+
+* `3J` - Joins three consecutve lines.
 
 ## Search
 
@@ -104,7 +127,17 @@ Prepend "no" to switch an option off (`:set noic`)
 
 ## Copying
 
-* `y` - To copy text, this could be used with hightlighted text after selecting it with visual mode or with another operator `yw`)
+* `y` - To copy text, this could be used with hightlighted text after selecting it with visual mode or with another operator `yw`
+
+## Repeat
+
+* `.` - Any time you make the same editing command over and over, you can save time with the repeat command.
+
+## Undo
+
+* `u`- You can undo your last command with this one. It seems the cursor needs not to be on the line where the original edit was made.
+* `U` - Undoes all edits on a single line, as long as the cursor remains on that line
+* `CTRL - R` - To "redo" an undone operation
 
 ## Identation
 
@@ -185,3 +218,6 @@ This plugin can also be used with delete, change and yank (`dar` - Todo delete a
 
 - `:%! slackcat -c test -m image.png` - Sends a image.png to `test`channel in slack
 - `:%! slackcat -u mayra -m image.png` - Sends image.png to specific user in slack (in this case to `mayra`) 
+
+**************************************************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
