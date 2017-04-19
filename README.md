@@ -4,7 +4,6 @@
 
 * `u` - Undo the last command
 * `U` - Undo all the changes on a line
-* `Ctrl + R` - Redo the commands (undo the undo's)
 * `p` - Put previously deleted text after the cursor
 * `v` - To select text, after pressing `v` move the cursor around and then press `:`. You can do whatever you want with the selected course (write `w test` to save it to another file called test or `d` to delete it)
 
@@ -13,11 +12,15 @@
 * `j`, `k` - Move the cursor down / up
 * `G` - To move to the bottom of the file
 * `gg`- To move to the start of the file
+* `ngg` - Go to given line n
+* ```` - Returns you to your original position (after `gg` command).
 * `H` - To move high within the viewport
 * `M` - To move middle within the viewport
-* `L` - to move low within the viewport
-* `Ctrl + u` - To move up (a reasonable amount of lines)
-* `Ctrl + d` - To move down (a reasonable amount of lines)
+* `L` - To move low within the viewport
+* `Ctrl + U` - To move up (a reasonable amount of lines - half screen)
+* `Ctrl + D` - To move down (a reasonable amount of lines - half screen)
+* `{` - Move to the beginning of current paragraph
+* `}` - Move to the beginning of the next paragraph
 
 # Moving within a line 
 
@@ -26,13 +29,13 @@
 * `w` - To move foward a word 
 * `b` - To move backward a word 
 * `e` - To move to the end of the word
-* `f` - To move for a letter (e.g `f4` will move to the next 4)
-* `F` - To move for a character backwards
-* `t` - To move until a character (e.g `t,` will move **until** the next comma)
-* `T` - To move until a character backwards
+* `fx` - Moves the cursor to next ocurrence of x in the line (_x stands for any character_). e.g `f4` will move to the next 4
+* `Fx` - Moves cursor to previous ocurrence of x in the line (_x stands for any character_).
+* `tx` - Moves cursor to character _before_ next ocurrence of x in the line.
+* `Tx` - Moves cursor to character _after_ previous ocurrence of x in the line.
 * `;` - Repeat last `f`, `t`, `F` or `T` command
 * `,` - Repeat last `f`, `t`, `F` or `T` command but in opposite direction
-* `+` - To the first character of the next line
+* `+` - To the first character of the next line (`Enter` does the same thing)
 * `-` - To the first character of the previous line
 
 You can use this motions with numbers:
@@ -52,11 +55,12 @@ You can use this motions with numbers:
 * `50i*ESC` - Inserts 50 asterisks
 * `25a*-` - Appends 50 characters (25 pairs of asterik and hyphen)
 
-### Delete
+## Deletions
 
 * `dw` - Delete until the start of the next word
 * `de` - Delete to the end of the current word.
 * `dE` - Delete until the end of the word, including punctuation
+* `dH` - Deletes top of the screen
 * `d$` - Delete to the end of the line. `D` will also do the trick.
 * `dj` - Delete down a line
 * `dd` - Delete the complete line
@@ -86,6 +90,7 @@ You can user this motions with numbers:
 * `cc` - Deletes a line and change you into insert mode
 * `caw`- Deletes a complete word and change you into insert mode
 * `~` - Will change a lowercase letter to uppecase or an uppercase letter to lowercase.
+* `cH` - Changes top of the screen
 
 ## Joining lines together
 
@@ -119,17 +124,24 @@ Prepend "no" to switch an option off (`:set noic`)
 * `:%s/old/new/gc` - Changes all the ocurrences of "old" for "new" in a file with a prompt whether to substitute or not
 * `:#,#s/old/new/g` - Changes all the ocurrences of "old" for "new" between two lines indicated by `#`
 
+## Moving within a screen
+
+* `H` - Move to the top line on screen
+* `M` - Move to middle line on screen
+* `L` - Move to last line on screen
+
 ## External Commands
 
 * `:r <file_name>` - Retrieves the file name and puts it below the cursor position
 * `:r !dir` - Reads the output of the dir command and puts it below the cursor position
 * `:! <command>`- Execute an external command, to finish it just press <enter>
 
-## Copying
+## Copying
 
 * `y` - To copy text, this could be used with hightlighted text after selecting it with visual mode or with another operator `yw`
+* `yH` - Copy top of the screen
 
-## Repeat
+## Repeat
 
 * `.` - Any time you make the same editing command over and over, you can save time with the repeat command.
 
@@ -139,7 +151,7 @@ Prepend "no" to switch an option off (`:set noic`)
 * `U` - Undoes all edits on a single line, as long as the cursor remains on that line
 * `CTRL - R` - To "redo" an undone operation
 
-## Identation
+## Indentation
 
 * `>` - To indent a line
 * `<` - To dedent a line
@@ -167,7 +179,7 @@ Prepend "no" to switch an option off (`:set noic`)
 * `zt` - Bring the current line to the top of the window
 * `zb` - Bring the current line to the bottom of the window
 
-## Tabs
+## Tabs
 
 * `:tabnew` - Opens a new tab
 * `:tabedit` - Edit the specific file in a new tab
@@ -175,18 +187,18 @@ Prepend "no" to switch an option off (`:set noic`)
 * `:GT` - Go to the previous tab
 * `Ctrl + w + T` - Break the current window out to a new tab
 
-## Visual Modes
+## Visual Modes
 
 * `V` - Changes to visual line mode which operates on entire lines at a time.
 * `Ctrl + v`- Changes to visual block mode which allows you for selecting a column or a text. You can use `I` or `A` to insert text before or after, Vim will only show the change for the first line of the block, but will then replicate to all lines after you complete the change and hit `esc`. Really helpful for `git rebase` operations
 
-## Configuration
+## Configuration
 
 * `:e $MYVIMRC` - Open your vimrc fileand allows for quick editing
 
-## Plugins
+## Plugins
 
-### CtrlP
+### CtrlP
 
 * `Ctrl + k` - Move up in the results lists
 * `Ctrl + j`- Move down in the results list
@@ -206,18 +218,15 @@ Prepend "no" to switch an option off (`:set noic`)
 
 This plugin can also be used with delete, change and yank (`dar` - Todo delete arround current ruby block, `cim` - To change inside current ruby method, etc. How awesome is that?)
 
-### Navigating between ruby file
+### Navigating between ruby file
 
 - `gf` - Jumps to highlighted file
 - `ctrl + o` - Returns to original file (after `gf`)
 - `find` - Make fuzzy search with an argument, under the hood uses `ctrl+d` to autocomplete the search. *This is what `Econtroller`, `Emodel` & `Eview`` commands use* 
 
-## Extras
+## Extras
 
 ### Slackcat
 
 - `:%! slackcat -c test -m image.png` - Sends a image.png to `test`channel in slack
 - `:%! slackcat -u mayra -m image.png` - Sends image.png to specific user in slack (in this case to `mayra`) 
-
-**************************************************
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
