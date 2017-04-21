@@ -196,6 +196,10 @@ Prepend "no" to switch an option off (`:set noic`)
 
 * `:e $MYVIMRC` - Open your vimrc fileand allows for quick editing
 
+### Yanking to Named Buffers
+
+* `"a7yy` - Yank next seven lines into a buffer name a (You can replace a with any character). To put the text back use `"aP`, it will put it after the cursor
+
 ## Plugins
 
 ### CtrlP
