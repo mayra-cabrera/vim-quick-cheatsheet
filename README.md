@@ -122,9 +122,9 @@ Prepend "no" to switch an option off (`:set noic`)
 * `:s/old/new/g`- Changes all the ocurrences of "old" for "new" in a line 
 * `:%s/old/new/g` - Changes all the ocurrences of "old" for "new" in a file
 * `:%s/old/new/gc` - Changes all the ocurrences of "old" for "new" in a file with a prompt whether to substitute or not
-* `:#,#s/old/new/g` - Changes all the ocurrences of "old" for "new" between two lines indicated by `#`
+* `:#,#s/old/new/g` - Changes all the ocurrences of "old" for "new" between two lines indicated by `#`. e.g `:50,100s/old/new/g` - Change every ocurrence of _old_ to _new_ from line 50 to line 100.
 
-## Moving within a screen
+## Moving within a screen
 
 * `H` - Move to the top line on screen
 * `M` - Move to middle line on screen
@@ -185,16 +185,17 @@ Prepend "no" to switch an option off (`:set noic`)
 * `:tabedit` - Edit the specific file in a new tab
 * `:gt` - Go to the next tab
 * `:GT` - Go to the previous tab
-* `Ctrl + w + T` - Break the current window out to a new tab
 
 ## Visual Modes
 
-* `V` - Changes to visual line mode which operates on entire lines at a time.
 * `Ctrl + v`- Changes to visual block mode which allows you for selecting a column or a text. You can use `I` or `A` to insert text before or after, Vim will only show the change for the first line of the block, but will then replicate to all lines after you complete the change and hit `esc`. Really helpful for `git rebase` operations
 
-## Configuration
+## Saving Part of a File
 
-* `:e $MYVIMRC` - Open your vimrc fileand allows for quick editing
+* `:230,$w new_file_name` - Saves from line 230 to the end of the file in `new_file_name`.
+* `:.,600w new_file_name` - Saves from current line to line 600 in `new_file_name`.
+
+## Configuration
 
 ### Yanking to Named Buffers
 
@@ -206,7 +207,7 @@ Prepend "no" to switch an option off (`:set noic`)
 
 * `Ctrl + k` - Move up in the results lists
 * `Ctrl + j`- Move down in the results list
-* `Ctrl + p` - Cyclce through previous searches
+* `Ctrl + p` - Cycle through previous searches
 * `Ctrl + n` - Cycle through foward serches
 * `Ctrl + t` - Open the highlighted file in a new tab
 * `Ctrl + s` - Open the hightighted file in a new split 
