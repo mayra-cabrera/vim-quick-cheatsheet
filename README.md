@@ -123,6 +123,8 @@ Prepend "no" to switch an option off (`:set noic`)
 * `:%s/old/new/g` - Changes all the ocurrences of "old" for "new" in a file
 * `:%s/old/new/gc` - Changes all the ocurrences of "old" for "new" in a file with a prompt whether to substitute or not
 * `:#,#s/old/new/g` - Changes all the ocurrences of "old" for "new" between two lines indicated by `#`. e.g `:50,100s/old/new/g` - Change every ocurrence of _old_ to _new_ from line 50 to line 100.
+* `:%s/Yazstremski/& Carl/` - Replaces all _Yazsgreamski_ ocurrences for _Yazstremski Carl_
+* `:1,10s/.*/(&)/` - Sorrounds each line from 1 to 10 with parentheses
 
 ## Moving within a screen
 
